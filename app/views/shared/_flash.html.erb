@@ -1,0 +1,11 @@
+<% if flash.any? %>
+  <% flash.each do |type, message| %>
+    <div
+      data-controller="flash"
+      class="absolute  top-10  px-4 py-2 rounded text-sm border shadow-md
+             inline-block
+             <%= type == "notice" ? "bg-green-500 text-white border-green-600" : "bg-red-500 text-white border-red-600" %>">
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
