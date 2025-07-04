@@ -2,10 +2,8 @@
   <div class="w-full max-w-sm bg-white p-14 rounded shadow-sm border border-gray-200">
     <h2 class="text-xl font-semibold text-center mb-4">Sign Up</h2>
 
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%# <%= render "devise/shared/error_messages", resource: resource %> 
-
-      <div class="mb-3">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>     
+     <div class="mb-3">
         <%= f.label :email, class: "block text-sm font-medium text-gray-700" %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mt-1 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-indigo-500" %>
         <% if resource.errors[:email].any?%>
@@ -42,7 +40,7 @@
       </div>
 
       <div>
-        <%= f.submit "Sign up", class: "w-full bg-[#3f374d] text-white py-2 rounded hover:bg-[#2e2a3a] transition" %>
+        <%= f.submit "Sign up", class: "w-full bg-[#3f374d] text-white py-2 rounded " %>
       </div>
       
     <% end %>

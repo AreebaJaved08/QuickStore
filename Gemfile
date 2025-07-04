@@ -64,4 +64,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+group :development, :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "dotenv-rails", require: "dotenv/load"
+end
 gem "devise"
+gem "letter_opener"

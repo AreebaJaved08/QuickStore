@@ -9,9 +9,9 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     plugin(function ({ addVariant }) {
-      addVariant('active-link', '&.active-link'),
-      addVariant('group-active-link', ':merge(.group).active-link &'),
-      addVariant('hocus', ['&:hover', '&:focus'])
+      addVariant('active-link', '&.active-link');
+      addVariant('group-active-link', ':merge(.group).active-link &');
+      addVariant('hocus', ['&:hover', '&:focus']);
     })
   ],
   content: [
@@ -21,6 +21,10 @@ module.exports = {
     './app/javascript/**/*.js',
   ],
   theme: {
-
+    extend: {
+      colors: {
+        'dark-purple': '#3f374d',
+      },
+    },
   }
 }
